@@ -1,0 +1,5 @@
+.footer{width:100%;position: fixed;bottom: 0;}
+.footer .footer-b{display: flex;justify-content: space-between;}
+.footer .footer-b li{height:.42rem;font:100 .14rem/.42rem "";background:#E1E0E0;width:25%;text-align: center;color:#646464;}
+.footer .footer-b li a{height:100%;width:100%;display: block}
+.footer .footer-b li a.active{background: #CEC9C9;}

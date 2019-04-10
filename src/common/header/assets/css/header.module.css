@@ -1,0 +1,25 @@
+.header{
+    height: .44rem;
+    background: #F9F9F9;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin:auto;
+}
+
+.header .back{
+    font:.12rem/.12rem "";
+    position: absolute;
+    left:.1rem;
+}
+
+.header .title{
+    width: .94rem;
+    height: .24rem;
+    font: .16rem/.24rem "";
+    text-align: center;
+    margin: 0 auto;
+}

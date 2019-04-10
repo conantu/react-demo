@@ -1,0 +1,92 @@
+.user-head{
+    width: 3.75rem;
+    height: 2.21rem;
+    background: #E8E7E7;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    overflow: hidden;
+}
+
+.user-head .title {
+    text-align: center;
+    width: 1.43rem;
+    height: .42rem;
+    font: .14rem/.42rem "";
+    margin: .06rem auto;
+}
+
+.user-head .set {
+    position: absolute;
+    right: 0;
+    top: .17rem;
+    width: .68rem;
+    height: .2rem;
+    font: .1rem/.15rem "";
+    text-align: center;
+}
+
+.user-head .icon{
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 auto .1rem;
+}
+
+.user-head .username,.user-head .desc {
+    text-align: center;
+    width: 1.43rem;
+    height: .2rem;
+    font: .14rem/.2rem "";
+    margin: 0 auto;
+}
+
+.user-head .desc{
+    font-size: .1rem;
+}
+
+.user-c{
+
+    height: .9rem;
+    margin: .05rem auto .24rem;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    padding: .19rem .4rem .1rem;
+    border-radius: .1rem ;
+}
+
+.user-c .follow,.user-c .fans{
+    width: .94rem;
+    text-align: center;
+}
+
+.user-c .follow .follow-num,.user-c .fans .fans-num{
+    font: .12rem/.23rem "";
+}
+
+.user-c span{
+    font: .14rem/.42rem "";
+}
+
+.user-link{
+    width: 3.37rem;
+    margin: 0 auto;
+}
+
+.user-link ul li a{
+    display: flex;
+    align-items: center;
+    height: .42rem;
+    color: #646464;
+    font: .14rem/.42rem "";
+}
+
+.user-link ul li .circle{
+    width: .19rem;
+    height: .19rem;
+    border-radius: 50%;
+    border:.01rem solid #bbb;
+    margin-right: .07rem;
+    margin-left: .04rem;
+}

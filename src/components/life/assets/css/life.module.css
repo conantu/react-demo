@@ -1,0 +1,12 @@
+.header{margin:.1rem .48rem;}
+.header .head{width:100%;display: flex;justify-content: space-between;}
+.header .head li{height:.24rem;font:.16rem/.24rem "";text-align: center;color:#646464;width:33%;}
+.header .head li.active{background: #F8F8F8;}
+.header .follow{width: 1.03rem;height: .24rem;font:.1rem/.24rem "Arial";background-color: rgba(248, 248, 248, 1);color: rgba(164, 162, 162, 1);text-align: center;border: 1px solid rgba(255, 255, 255, 0);margin:0 auto;margin-top:.13rem;}
+.main{margin:.06rem .13rem 0 .12rem;background: #F8F8F8;padding:.36rem 0;}
+.main .main-t{display: flex;justify-content: space-between;flex-wrap:wrap;padding:0 .34rem;}
+.main .main-t li{width:.74rem;margin-bottom:.2rem;position: relative;}
+.main .main-t li .icon{width:.74rem;height:.74rem;border-radius: 50%;background:#D9D9D9;}
+.main .main-t li p{padding:.01rem .02rem;text-align: center;font:.1rem/.15rem "Arial";color:#A6A4A4;}
+.main .main-t li .icon-gou{position: absolute;top:0;right:0;width:.14rem;height:.14rem;display: none;}
+.main .focus{width: 1.31rem;height: .24rem;font:.16rem/.24rem "Arial";border-radius: .26rem;background-color: rgba(215, 213, 213, 1);color: rgba(100, 100, 100, 1);text-align: center;border: .01rem solid rgba(255, 255, 255, 0);margin:0 auto;}

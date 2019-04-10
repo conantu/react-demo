@@ -1,0 +1,17 @@
+.navhome{
+    display: flex;
+    margin: 0 auto;
+    width: 2rem;
+    margin-top:.2rem;
+}
+
+.navhome li{
+    width: .94rem;
+    height:.24rem;
+    text-align: center;
+    font: .14rem/.2rem "";
+}
+
+.navhome li a{
+    color: #646464;
+}

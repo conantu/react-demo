@@ -1,0 +1,103 @@
+.banner{
+    width: 3.48rem;
+    height: 1.5rem;
+    background: #D9D9D9;
+    margin:.6rem auto 0;
+    border-radius: .15rem;
+}
+
+.cheaper{
+    width: 3.48rem;
+    height: .5rem;
+    background: #D9D9D9;
+    margin: .1rem auto;
+    border-radius: .15rem;
+}
+
+.types{
+    width: 3.48rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.types li{
+
+}
+
+.types li .pic{
+    width: .44rem;
+    height: .44rem;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.types li .title{
+    text-align: center;
+    width: .65rem;
+    height: .24rem;
+    background: #F8F8F8;
+    font: .12rem/.24rem "";
+    margin-top: .05rem;
+}
+
+.must{
+    padding:.2rem .15rem .4rem ;
+}
+
+.must .must-title{
+    display: flex;
+    justify-content: space-between;
+    font: .14rem/.24rem "";
+}
+
+.must .must-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.must .must-list li{
+    width: .86rem;
+    text-align: center;
+    margin: .1rem .1rem;
+}
+
+.must .must-list li .pic{
+    width: .86rem;
+    height: .86rem;
+    line-height: .2rem;
+    border-radius: .08rem;
+    text-align: center;
+    border: 1px solid rgba(187, 187, 187, 1);
+}
+
+.must .must-list li .title{
+    width: .86rem;
+    height: .16rem;
+    line-height: .17rem;
+    color: rgba(16, 16, 16, 1);
+    font-size: .12rem;
+    text-align: center;
+    font-family: Arial;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.must .must-list li .price{
+    width: .86rem;
+    height: .13rem;
+    line-height: .15rem;
+    color: rgba(16, 16, 16, 1);
+    font-size: .1rem;
+    text-align: center;
+    font-family: Arial;
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+
+
+
+
+

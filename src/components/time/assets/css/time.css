@@ -1,0 +1,87 @@
+.top{
+    height:2.47rem;
+    background: #F2F2F2;
+    overflow: hidden;
+}
+
+.top .name{
+    float: right;
+    width: .55rem;
+    height: .3rem;
+    background: #fff;
+    margin: .08rem .09rem 0 0;
+    font: .14rem/.3rem "";
+    text-align: center;
+}
+
+.top .icon{
+    width: .85rem;
+    height: .85rem;
+    border-radius: 50%;
+    background: #fff;
+    margin:.5rem auto 0;
+}
+
+.top .des{
+
+}
+
+.top .des ul{
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem .6rem 0;
+}
+
+.top .des ul li{
+    width: .94rem;
+    height: .3rem;
+    background: #fff;
+    text-align: center;
+    font: .14rem/.3rem "";
+}
+
+.nav{
+
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav ul li{
+    width: .94rem;
+    height: .42rem;
+    font: .14rem/.42rem "";
+    text-align: center;
+}
+
+.photos{}
+
+.photos .circle{
+    width: .18rem;
+    height: .18rem;
+    border-radius: 50%;
+    background:#F0EDED;
+    position: absolute;
+    left: .06rem;
+    z-index: 10;
+}
+
+.photos .pics{
+    margin-left: .15rem;
+    border-left: .01rem solid #bbb;
+    overflow: hidden;
+}
+
+.photos .pics ul{
+    margin-left: .14rem;
+    margin-top: .2rem;
+}
+
+.photos .pics ul li{
+    width: 3.37rem;
+    height: 2.1rem;
+    background: #F2F2F2;
+    margin-bottom: .2rem;
+}

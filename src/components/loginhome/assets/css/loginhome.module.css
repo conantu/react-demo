@@ -1,0 +1,12 @@
+.loginhome{background:#FB901E;height:100%;text-align: center;}
+.icon_user{padding-top:.68rem;width:100%;margin:0 auto;height:1.73rem;margin-bottom:.2rem;}
+.wel{width:.98rem;height:.42rem;margin:0 auto;font:.22rem/.42rem "Arial";color:#fff;}
+.hi{height:.42rem;margin:0 auto;font:.22rem/.42rem "Arial";color:#fff;}
+.reg{width: 3.37rem;height: .46rem;background:#fff;color:#101010;
+    font:.2rem/.46rem "Arial";border-radius: 5.21rem;margin:0 auto;margin-top:.66rem;}
+.log{width: 3.37rem;height: .46rem;background:#fff;color:#101010;
+    font:.2rem/.46rem "Arial";border-radius: 5.21rem;margin:0 auto;margin-top:.38rem;}
+.help{font:.22rem/.42rem "Arial";color:#fff;text-align: right;margin:.58rem .26rem 0 0;}
+.reg a,.log a{
+    display: block;
+}

@@ -1,0 +1,7 @@
+.login_b{}
+.login_b ul{width:100%;}
+.login_b ul li{height:.42rem;margin:0 .18rem;border-bottom:.01rem solid #E6E6E6;padding:.2rem 0 .15rem 0;}
+.login_b ul li .user_icon{margin-top:.06rem;float: left;width:12%;margin-left:.1rem;}
+.login_b ul li input{float: left;height:.42rem;width:70%;border:0;font:.22rem/.42rem "Arial";color:#A6A6A6;}
+.login_b .login_logo{width:30%;float:right;margin:.24rem .24rem;display: flex;justify-content: space-between;}
+.login_btn{width:100%;position: absolute;bottom:0;height:.65rem;background:#FFB64B;border:0;font:.22rem/.65rem "Arial";color:#101010;}
