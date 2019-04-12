@@ -31,6 +31,12 @@
     border-radius: 50%;
     background: #fff;
     margin: 0 auto .1rem;
+    overflow: hidden;
+}
+
+.user-head .icon img{
+    width: 100%;
+    height: 100%;
 }
 
 .user-head .username,.user-head .desc {

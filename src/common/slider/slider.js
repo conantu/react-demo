@@ -27,7 +27,7 @@ class SliderHome extends React.Component{
     }
 
     componentDidMount() {
-        new Swiper('.swiper-container', {
+        var swiper = new Swiper('.swiper-container', {
             effect: 'coverflow',
             autoplay:true,
             grabCursor: true,

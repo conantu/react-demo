@@ -1,0 +1,64 @@
+.search{
+    position: absolute;
+    right: .2rem;
+}
+
+.bg{
+    background: #F9F9F9;
+    height: 2rem;
+    width: 100%;
+    top: .44rem;
+    z-index: -1;
+    position: fixed;
+}
+
+.list{
+
+}
+
+.list ul{
+    width: 3.2rem;
+    margin: .8rem auto;
+}
+
+.list ul li{
+    height: 1.5rem;
+    background: #DFD7D7;
+    border-radius: .1rem;
+    margin:.1rem auto;
+}
+
+.list ul li a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list ul li .pic{
+    width: .94rem;
+    height: .94rem;
+    background: #fff;
+}
+
+.list ul li .article{
+    width: 1.6rem;
+    height:.94rem;
+}
+
+.list ul li .article .title{
+    font: .14rem/.24rem "";
+}
+
+.list ul li .article .desc{
+    font: .12rem/.2rem "";
+}
+
+.list ul li .article .price{
+    font: .12rem/.25rem "";
+}
+
+.list ul li .article .pj{
+    font: .1rem/.2rem "";
+}

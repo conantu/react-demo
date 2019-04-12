@@ -9,6 +9,7 @@ class Header extends Component {
                     <Icon type="left" />
                 </a>
                 <p className={style.title}>{this.props.pageName}</p>
+                {this.props.children}
             </div>
         )
     }

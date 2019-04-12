@@ -12,9 +12,31 @@ import Error from "./components/error/error";
 import Login from "./components/login/login";
 import LoginHome from "./components/loginhome/loginhome";
 import Register from "./components/register/register";
+import Need from "./components/need/need";
+import AfterFollow from "./components/afterfollow/afterfollow";
+import Community from "./components/community/community";
+import Detail from "./components/detail/detail";
+import TypeMore from "./components/typemore/typemore";
+import Car from "./components/car/car";
+import {connect} from 'react-redux'
+import {VIEW_FOOTER} from './store/types'
+import AuthUser from "./guard/User";
+
 
 class App extends Component {
+    componentWillReceiveProps(nextProps){//路由监听
+        let {viewFoot} = this.props;
+        let path = nextProps.location.pathname;
+        console.log(path)
+        if(/home|life|time|message|user|afterfollow/.test(path)){
+            viewFoot(true)
+        }
+        if(/login|loginhome|register|car|youpin|need|typemore|detail|community/.test(path)){
+            viewFoot(false)
+        }
+    }
     render(){
+        let {bFoot} = this.props;
         return (
             <>
                 <Switch>
@@ -22,18 +44,36 @@ class App extends Component {
                     <Route path={'/life'} component={Life}></Route>
                     <Route path={'/time'} component={Time}></Route>
                     <Route path={'/message'} component={Message}></Route>
-                    <Route path={'/user'} component={User}></Route>
+                    {/*<Route path={'/user'} component={User}></Route>*/}
+                    <AuthUser path={'/user'} component={User}></AuthUser>
                     <Route path={'/login'} component={Login}></Route>
                     <Route path={'/reg'} component={Register}></Route>
                     <Route path={'/loginhome'} component={LoginHome}></Route>
                     <Route path={'/youpin'} component={YouPin}></Route>
+                    <Route path={'/need'} component={Need}></Route>
+                    <Route path={'/afterfollow'} component={AfterFollow}></Route>
+                    <Route path={'/community'} component={Community}></Route>
+                    <Route path={'/detail/:id'} component={Detail}></Route>
+                    <Route path={'/typemore'} component={TypeMore}></Route>
+                    <Route path={'/car'} component={Car}></Route>
                     <Redirect exact from={'/'} to={'/home'}></Redirect>
                     <Route component={Error}></Route>
                 </Switch>
-                <Footer/>
+                {bFoot&&<Footer/>}
             </>
         )
     }
 }
 
-export default App;
+const initMapStateToProps=(state)=>({
+    bFoot:state.bFoot
+});
+
+const initMapDispatchToProps=dispatch=>({
+    viewFoot:(bl)=>dispatch({type:VIEW_FOOTER,payload:bl})
+});
+
+export default connect(
+    initMapStateToProps,
+    initMapDispatchToProps
+)(App)

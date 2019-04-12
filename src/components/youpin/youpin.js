@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import Header from "../../common/header/header";
 import style from './assets/css/youpin.module.css'
+import {Icon} from "antd";
+import {NavLink} from 'react-router-dom'
 
 class YouPin extends Component {
     state={
@@ -9,17 +11,19 @@ class YouPin extends Component {
     render(){
         return (
             <>
-                <Header pageName={this.state.pageName}/>
+                <Header pageName={this.state.pageName}>
+                    <Icon type="search" className={style.search}/>
+                </Header>
                 <div className={style.banner}></div>
                 <div className={style.cheaper}></div>
                 <ul className={style.types}>
                     <li>
-                        <a href="#">
+                        <NavLink to={'/typemore'}>
                             <div className={style.pic}></div>
                             <div className={style.title}>
                                 <p>清洁</p>
                             </div>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
                         <a href="#">
@@ -49,11 +53,11 @@ class YouPin extends Component {
                 <div className={style.must}>
                     <div className={style["must-title"]}>
                         <p>宝宝必备</p>
-                        <a href="#">all</a>
+                        <NavLink to={'/need'}>all</NavLink>
                     </div>
                     <ul className={style["must-list"]}>
                         <li>
-                            <a href="#">
+                            <NavLink to={'/detail/1'}>
                                 <div className={style.pic}></div>
                                 <div className={style.title}>
                                     <p>1片吸干6次尿</p>
@@ -61,7 +65,7 @@ class YouPin extends Component {
                                 <div className={style.price}>
                                     <p>会员价￥999</p>
                                 </div>
-                            </a>
+                            </NavLink>
                         </li>
                         <li>
                             <a href="#">

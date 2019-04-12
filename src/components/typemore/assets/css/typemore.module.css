@@ -1,0 +1,6 @@
+.search{position: absolute;right:.2rem;}
+.type_main{width:100%;margin-top:.44rem;}
+.type_main ul{display:flex;flex-wrap: wrap;justify-content: space-around;}
+.type_main ul li{margin-top:.26rem;}
+.type_main ul li .pic{width:1.52rem;height:1.52rem;border-radius: .08rem;border:.01rem solid #BBBBBB;margin-bottom:.09rem;}
+.type_main ul li p{text-align: center;color:#101010;font:.12rem/.18rem "Arial";}
