@@ -2,7 +2,12 @@
 const state={
     bFoot:true,
     user:{},
-    allusers:{}
+    allusers:{},
+    type:'',
+    news:{},
+    id:"",
+    follow_id:[],
+    content:{}
 };
 
 export default state;

@@ -5,6 +5,8 @@ import Follow from '../../common/follow/follow';
 import {NavLink} from 'react-router-dom';
 import {connect} from "react-redux";
 import allusers from '../../store/actions/allusers'
+import {SEND_ID} from "../../store/types";
+import {attendId} from "../../store/actions/attendId";
 class Life extends Component{
     constructor(props){
         super();
@@ -30,11 +32,12 @@ class Life extends Component{
                         "content":[{"f_img":"https://ps.ssl.qhmsg.com/sdr/400__/t018a31bdec4cc20ac9.jpg","f_time":"12","f_artick":"人生，走着走着便懂了，聚散离别太过正常，每个人都有每个人的方向，不必感伤，下一站也许还会有人和我们红尘作伴，共赴人生另一个驿站；人生，走着走着便懂了，孤独是每个人务必经历的，至少我们的内心需要走过一次孤独，因为没谁能陪谁走到最后，所以务必学会独自承受；人生，走着走着便懂了，生活本是一张大网，所有的琐碎都使我们无处可逃，学会坦然乐观地理解，学会用心阳光地生活，不为一点而困，心若向阳，无谓悲伤。"}]
                 }]},
             user:{},
+            follow_id:[],
             dis:false
         }
     }
     render(){
-        // console.log(this.state.users)
+        console.log(this.state.user)
         sessionStorage.getItem('users')? this.state.users = JSON.parse(sessionStorage.getItem('users')):""
         sessionStorage.getItem('login') ? this.state.user=JSON.parse(sessionStorage.getItem('login')) : ''
         return (
@@ -54,14 +57,16 @@ class Life extends Component{
                                                 <p>{item.username}</p>
                                                 <Icon type="check-circle" className={style['icon-gou']} />
                                             </li>)
-
                                 }
                             )
                             // console.log(this.props.user.msg.id)
                         }
                     </ul>
                     <div className={style.focus}>
-                        <NavLink to={'/afterfollow'}>一键关注</NavLink>
+                        <a onClick={()=>{
+                            this.props.sendId(this)
+                            this.props.attend(this)
+                        }}>一键关注</a>
                     </div>
                 </div>
             </div>
@@ -70,7 +75,10 @@ class Life extends Component{
     follow(eve){
         if(eve.target.parentNode.parentNode.tagName == 'LI'){
             eve.target.parentNode.parentNode.children[2].style = getComputedStyle(eve.target.parentNode.parentNode.children[2]).display == 'none' ? 'display:block' : 'display:none';
-            console.log(eve.target.parentNode.parentNode.getAttribute('abc'))
+            // console.log(eve.target.parentNode.parentNode.getAttribute('abc'))
+            getComputedStyle(eve.target.parentNode.parentNode.children[2]).display=='block'?this.state.follow_id.push(+eve.target.parentNode.parentNode.getAttribute('abc')):this.state.follow_id.pop(+eve.target.parentNode.parentNode.getAttribute('abc'))
+            console.log(this.state.follow_id)
+            console.log(this.state.user.msg.id)
         }
     }
     randomArr(arr,id,user){
@@ -108,6 +116,20 @@ const initMapDispatchToProps=dispatch=>({
                 sessionStorage.setItem('users',JSON.stringify(res))
             }
         )
+    },
+    sendId:(_this)=>{
+        dispatch({type:SEND_ID,payload:{id:_this.state.user.msg.id,follow_id:_this.state.follow_id}})
+    },
+    attend:(_this)=>{
+        dispatch(attendId({
+            url:'/api/attend',
+            id:_this.state.user.msg.id,
+            follow_id:_this.state.follow_id.join(',')
+        })).then(res=>{
+            console.log(res)
+            sessionStorage.setItem('login',JSON.stringify({..._this.state.user,msg:{..._this.state.user.msg,follow_id:_this.state.user.msg.follow_id.concat(_this.state.follow_id)}}))
+            _this.props.history.push('/afterfollow')
+        })
     }
 });
 

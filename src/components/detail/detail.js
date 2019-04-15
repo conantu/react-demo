@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import style from './assets/css/detail.module.css'
 import Header from "../../common/header/header";
 import SliderHome from "../../common/slider/slider";
+import {NavLink} from "react-router-dom";
 class Detail extends Component {
     render(){
         return (
@@ -29,7 +30,9 @@ class Detail extends Component {
                         <p>好评</p>
                     </div>
                     <div className={style.sizebtn}>
-                        <p>规格</p>
+                        <p>
+                            <NavLink to={'/joincar'}>规格</NavLink>
+                        </p>
                     </div>
                 </div>
                 <div className={style.desc}>

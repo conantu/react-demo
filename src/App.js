@@ -21,17 +21,17 @@ import Car from "./components/car/car";
 import {connect} from 'react-redux'
 import {VIEW_FOOTER} from './store/types'
 import AuthUser from "./guard/User";
+import JoinCar from "./components/joincar/joincar";
 
 
 class App extends Component {
     componentWillReceiveProps(nextProps){//路由监听
         let {viewFoot} = this.props;
         let path = nextProps.location.pathname;
-        console.log(path)
         if(/home|life|time|message|user|afterfollow/.test(path)){
             viewFoot(true)
         }
-        if(/login|loginhome|register|car|youpin|need|typemore|detail|community/.test(path)){
+        if(/login|loginhome|register|car|youpin|need|typemore|detail|community|joincar/.test(path)){
             viewFoot(false)
         }
     }
@@ -41,7 +41,8 @@ class App extends Component {
             <>
                 <Switch>
                     <Route path={'/home'} component={Home}></Route>
-                    <Route path={'/life'} component={Life}></Route>
+                    {/*<Route path={'/life'} component={Life}></Route>*/}
+                    <AuthUser path={'/life'} component={Life}></AuthUser>
                     <Route path={'/time'} component={Time}></Route>
                     <Route path={'/message'} component={Message}></Route>
                     {/*<Route path={'/user'} component={User}></Route>*/}
@@ -56,6 +57,7 @@ class App extends Component {
                     <Route path={'/detail/:id'} component={Detail}></Route>
                     <Route path={'/typemore'} component={TypeMore}></Route>
                     <Route path={'/car'} component={Car}></Route>
+                    <Route path={'/joincar'} component={JoinCar}></Route>
                     <Redirect exact from={'/'} to={'/home'}></Redirect>
                     <Route component={Error}></Route>
                 </Switch>
