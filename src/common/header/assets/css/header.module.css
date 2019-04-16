@@ -8,6 +8,7 @@
     right: 0;
     top: 0;
     margin:auto;
+    z-index: 10;
 }
 
 .header .back{

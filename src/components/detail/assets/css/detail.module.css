@@ -1,0 +1,114 @@
+html{
+    height:auto!important;}
+
+.slider{
+    margin: .7rem 0 .3rem;
+}
+
+.title{
+    text-align: center;
+    font: .2rem/.5rem "";
+}
+
+.subtitle{
+    display: flex;
+    justify-content: center;
+}
+
+.subtitle .price,.subtitle .goodpj{
+    width: .6rem;
+    height: .2rem;
+    border: .01rem solid #ccc;
+    border-radius: .3rem;
+    text-align: center;
+    font: .12rem/.2rem "";
+    margin: 0 .2rem;
+}
+
+.vipprice {
+    width: 1.08rem;
+    height: .18rem;
+    border-radius: .26rem;
+    background: #EAEAEA;
+    border: .01rem solid #bbbbbb;
+    text-align: center;
+    margin: .15rem auto;
+    font: .12rem/.18rem "";
+}
+
+.details{
+    width: 3.04rem;
+    height: .53rem;
+    line-height: .2rem;
+    border-radius: .08rem;
+    border: .01rem solid rgba(187, 187, 187, 1);
+    margin: .15rem auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.details>div{
+    width: 1.3rem;
+    text-align: center;
+    font: .12rem/.2rem "";
+}
+
+.pj{
+    display: flex;
+    justify-content: center;
+    margin: .15rem;
+}
+
+.pj>div{
+    width: 1.23rem;
+    height: .34rem;
+    line-height: .34rem;
+    border-radius: .1rem;
+    color: rgba(106, 106, 106, 1);
+    font-size: .14rem;
+    text-align: center;
+    font-family: Arial;
+    border: .01rem solid rgba(187, 187, 187, 1);
+    text-align: center;
+    margin: 0 .25rem;
+}
+
+.desc{
+    width: 3.04rem;
+    height: .53rem;
+    line-height: .2rem;
+    border-radius: .08rem;
+    text-align: center;
+    border: .01rem solid rgba(187, 187, 187, 1);
+    margin: 0 auto;
+}
+
+.buy{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+}
+
+.buy .addcar{
+    width: 1.83rem;
+    height: .7rem;
+    line-height: .7rem;
+    border-radius: .14rem;
+    background-color: rgba(234, 232, 232, 1);
+    color: rgba(16, 16, 16, 1);
+    font-size: .18rem;
+    text-align: center;
+    font-family: Arial;
+    border: .01rem solid rgba(255, 255, 255, 0);
+}
+
+.buy .buynow{
+    width: 1.92rem;
+    height: .7rem;
+    font: .18rem/.7rem "";
+    border-radius: .14rem;
+    background-color: rgba(198, 198, 198, 1);
+    text-align: center;
+    border: .01rem solid rgba(255, 255, 255, 0);
+}

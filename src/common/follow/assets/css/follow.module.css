@@ -1,0 +1,4 @@
+.header{margin:0 .48rem;padding-top:.1rem;}
+.header .head{width:100%;display: flex;justify-content: space-between;}
+.header .head li{height:.24rem;font:.16rem/.24rem "";text-align: center;color:#646464;width:33%;}
+.header .head li.active{background: #F8F8F8;}

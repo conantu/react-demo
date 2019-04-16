@@ -5,6 +5,8 @@
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     overflow: hidden;
+    background:url('http://img.zcool.cn/community/01c42158c24411a801219c7793e8e5.jpg@1280w_1l_2o_100sh.jpg') no-repeat center;
+    background-size: 150% 150%;
 }
 
 .user-head .title {
@@ -31,6 +33,13 @@
     border-radius: 50%;
     background: #fff;
     margin: 0 auto .1rem;
+    overflow: hidden;
+    opacity: .8;
+}
+
+.user-head .icon img{
+    width: 100%;
+    height: 100%;
 }
 
 .user-head .username,.user-head .desc {
