@@ -1,13 +1,16 @@
 
 const state={
     bFoot:true,
+    bLoading:false,
     user:{},
     allusers:{},
     type:'',
     news:{},
     id:"",
     follow_id:[],
-    content:{}
+    content:{},
+    goods:{},
+    detail:{}
 };
 
 export default state;

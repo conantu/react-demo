@@ -1,4 +1,4 @@
-import {GET_NEWS} from "../types";
+import {GET_NEWS, VIEW_LOADING} from "../types";
 
 export const getnews = ({url,data})=>{
     return dispatch =>{

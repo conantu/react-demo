@@ -7,19 +7,29 @@ import img2 from './assets/img/2.png'
 import img3 from './assets/img/3.png'
 
 class SliderHome extends React.Component{
+    state={
+        imgs:this.props.imgs
+    }
     render() {
         return (
             <div className="swiper-container">
                 <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                        <img src={img1} alt=""/>
-                    </div>
-                    <div className="swiper-slide">
-                        <img src={img2} alt=""/>
-                    </div>
-                    <div className="swiper-slide">
-                        <img src={img3} alt=""/>
-                    </div>
+                    {/*<div className="swiper-slide">*/}
+                    {/*    <img src={img1} alt=""/>*/}
+                    {/*</div>*/}
+                    {/*<div className="swiper-slide">*/}
+                    {/*    <img src={img2} alt=""/>*/}
+                    {/*</div>*/}
+                    {/*<div className="swiper-slide">*/}
+                    {/*    <img src={img3} alt=""/>*/}
+                    {/*</div>*/}
+                    {
+                        this.state.imgs.map((item,index)=>(
+                            <div className="swiper-slide" key={index}>
+                                <img src={item} alt=""/>
+                            </div>
+                        ))
+                    }
                 </div>
                 <div className="swiper-pagination"></div>
             </div>

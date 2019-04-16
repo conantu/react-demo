@@ -8,13 +8,13 @@ class Content extends Component{
     constructor(props){
         super()
         this.state={
-            id:3,
-            content:props.content
+            id:JSON.parse(sessionStorage.getItem('login')).msg.id,
+            content:{msg:[]}
         }
         props.getContent(this)
     }
     render(){
-        sessionStorage.getItem('content')?this.state.content = JSON.parse(sessionStorage.getItem('content')):""
+        sessionStorage.getItem('content')?this.state.content = JSON.parse(sessionStorage.getItem('content')):"";
         let {content} = this.state
         return (
             <div className={style.content}>
@@ -33,7 +33,7 @@ class Content extends Component{
                                     </div>
                                     <div className={style['con_c']}>
                                         <p>{item.content[0].f_artick}</p>
-                                        <p className={style.all}>全文</p>
+                                        <p className={style.all}></p>
                                     </div>
                                     <div className={style['con_pic']}>
                                         <img src={item.content[0].f_img} alt=""/>
@@ -64,6 +64,7 @@ const initMapDispatchToProps=dispatch=>({
             id:_this.state.id
         })).then(data=>{
             sessionStorage.setItem('content',JSON.stringify(data))
+            _this.setState({content:JSON.parse(sessionStorage.getItem('content'))})
             console.log(data)
         })
     }

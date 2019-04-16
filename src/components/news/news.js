@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
 import style from './assets/css/news.module.css'
-import {SET_TYPE} from "../../store/types";
+import {SET_TYPE, VIEW_LOADING} from "../../store/types";
 import {connect} from "react-redux";
 import {getnews} from "../../store/actions/getnews";
 class News extends Component {

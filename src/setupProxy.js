@@ -13,5 +13,11 @@ module.exports = function(app) {
       changeOrigin: true
     })
   );
+  app.use(
+    proxy("/app", {
+        target: 'http://39.100.34.8',
+        changeOrigin: true
+    })
+  );
 
 };

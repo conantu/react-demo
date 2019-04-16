@@ -3,10 +3,13 @@ import style from './assets/css/need.module.css'
 import Header from "../../common/header/header";
 import {Icon} from 'antd'
 import {NavLink} from "react-router-dom";
+import {getgoods} from "../../store/actions/getgoods";
+import {connect} from "react-redux";
 
 class Need extends Component {
     state={
-        pageName:'宝宝必备'
+        pageName:'宝宝必备',
+        goods:JSON.parse(sessionStorage.getItem('goods'))
     }
     render(){
         return (
@@ -17,50 +20,23 @@ class Need extends Component {
                 <div className={style.bg}></div>
                 <div className={style.list}>
                     <ul>
-                        <li>
-                            <NavLink to={'detail/1'}>
-                                <div className={style.pic}></div>
-                                <div className={style.article}>
-                                    <p className={style.title}>全球500强</p>
-                                    <p className={style.desc}>德国什么什么高分子</p>
-                                    <p className={style.price}>会员价：￥999</p>
-                                    <p className={style.pj}>宝马亲测：真的好用！！！！</p>
-                                </div>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div className={style.pic}></div>
-                                <div className={style.article}>
-                                    <p className={style.title}>全球500强</p>
-                                    <p className={style.desc}>德国什么什么高分子</p>
-                                    <p className={style.price}>会员价：￥999</p>
-                                    <p className={style.pj}>宝马亲测：真的好用！！！！</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div className={style.pic}></div>
-                                <div className={style.article}>
-                                    <p className={style.title}>全球500强</p>
-                                    <p className={style.desc}>德国什么什么高分子</p>
-                                    <p className={style.price}>会员价：￥999</p>
-                                    <p className={style.pj}>宝马亲测：真的好用！！！！</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div className={style.pic}></div>
-                                <div className={style.article}>
-                                    <p className={style.title}>全球500强</p>
-                                    <p className={style.desc}>德国什么什么高分子</p>
-                                    <p className={style.price}>会员价：￥999</p>
-                                    <p className={style.pj}>宝马亲测：真的好用！！！！</p>
-                                </div>
-                            </a>
-                        </li>
+                        {
+                            this.state.goods.map((item,index)=>(
+                                <li key={index}>
+                                    <NavLink to={'detail/'+item.id}>
+                                        <div className={style.pic}>
+                                            <img src={item.img_list[0]} alt=""/>
+                                        </div>
+                                        <div className={style.article}>
+                                            <p className={style.title}>{item.title}</p>
+                                            <p className={style.desc}>{item.g_desc}</p>
+                                            <p className={style.price}>会员价：{item.vip_price}</p>
+                                            <p className={style.pj}></p>
+                                        </div>
+                                    </NavLink>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>
@@ -68,4 +44,15 @@ class Need extends Component {
     }
 }
 
-export default Need;
+const initMapStateToProps=(state)=>({
+
+});
+
+const initMapDispatchToProps=dispatch=>({
+
+});
+
+export default connect(
+    initMapStateToProps,
+    initMapDispatchToProps
+)(Need)

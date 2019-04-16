@@ -22,6 +22,7 @@ import {connect} from 'react-redux'
 import {VIEW_FOOTER} from './store/types'
 import AuthUser from "./guard/User";
 import JoinCar from "./components/joincar/joincar";
+import Loading from "./common/loading/Loading";
 
 
 class App extends Component {
@@ -36,15 +37,17 @@ class App extends Component {
         }
     }
     render(){
-        let {bFoot} = this.props;
+        let {bFoot,bLoading} = this.props;
         return (
             <>
                 <Switch>
                     <Route path={'/home'} component={Home}></Route>
                     {/*<Route path={'/life'} component={Life}></Route>*/}
                     <AuthUser path={'/life'} component={Life}></AuthUser>
-                    <Route path={'/time'} component={Time}></Route>
-                    <Route path={'/message'} component={Message}></Route>
+                    {/*<Route path={'/time'} component={Time}></Route>*/}
+                    <AuthUser path={'/time'} component={Time}></AuthUser>
+                    {/*<Route path={'/message'} component={Message}></Route>*/}
+                    <AuthUser path={'/message'} component={Message}></AuthUser>
                     {/*<Route path={'/user'} component={User}></Route>*/}
                     <AuthUser path={'/user'} component={User}></AuthUser>
                     <Route path={'/login'} component={Login}></Route>
@@ -62,13 +65,15 @@ class App extends Component {
                     <Route component={Error}></Route>
                 </Switch>
                 {bFoot&&<Footer/>}
+                {bLoading&&<Loading/>}
             </>
         )
     }
 }
 
 const initMapStateToProps=(state)=>({
-    bFoot:state.bFoot
+    bFoot:state.bFoot,
+    bLoading:state.bLoading
 });
 
 const initMapDispatchToProps=dispatch=>({

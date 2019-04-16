@@ -73,7 +73,8 @@ class Life extends Component{
         )
     }
     follow(eve){
-        if(eve.target.parentNode.parentNode.tagName == 'LI'){
+        if(
+            eve.target.parentNode.parentNode.tagName == 'LI'){
             eve.target.parentNode.parentNode.children[2].style = getComputedStyle(eve.target.parentNode.parentNode.children[2]).display == 'none' ? 'display:block' : 'display:none';
             // console.log(eve.target.parentNode.parentNode.getAttribute('abc'))
             getComputedStyle(eve.target.parentNode.parentNode.children[2]).display=='block'?this.state.follow_id.push(+eve.target.parentNode.parentNode.getAttribute('abc')):this.state.follow_id.pop(+eve.target.parentNode.parentNode.getAttribute('abc'))
